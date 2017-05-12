@@ -33,14 +33,16 @@ project.ext.FIREBASE_VERSION = '10.2.1'
 project.ext.STICKY_HEADERS_LIB_VERSION = '0.4.3'
 
 buildscript {
+    ext.kotlin_version = '1.1.1'
     repositories {
         jcenter()
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:2.4.0-alpha7'
         classpath 'com.google.gms:google-services:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 

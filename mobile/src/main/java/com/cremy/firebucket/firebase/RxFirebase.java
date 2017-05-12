@@ -69,6 +69,7 @@ public class RxFirebase {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Log.d(TAG, dataSnapshot.toString());
                         T value = dataSnapshot.getValue(clazz);
+
                         if (value != null) {
                             if (!emitter.isDisposed()) {
                                 emitter.onNext(value);
